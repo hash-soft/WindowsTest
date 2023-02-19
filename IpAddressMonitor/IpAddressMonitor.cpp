@@ -1,66 +1,16 @@
 ﻿// WindowsTest.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
-//
-#include <SDKDDKVer.h>
-#include <Windows.h>
-//#define WIN32_LEAN_AND_MEAN 
-//#include <stdlib.h>
-//#include <malloc.h>
-//#include <memory.h>
-//#include <tchar.h>
+
+#include <winsock2.h>
 #include <Iphlpapi.h>
 #include <iostream>
-#include <IPTypes.h>
-//#include <winsock2.h>
+#include "Utils.h"
 #pragma comment(lib, "Iphlpapi.lib")
 
-/*
-#define  GAA_FLAGS (GAA_FLAG_SKIP_ANYCAST | GAA_FLAG_SKIP_DNS_SERVER |\
-					GAA_FLAG_SKIP_FRIENDLY_NAME | GAA_FLAG_SKIP_MULTICAST |\
-					GAA_FLAG_SKIP_UNICAST)
 
-#define WORKING_BUFFER_SIZE 15000
 
-#define MALLOC(x) HeapAlloc(GetProcessHeap(), 0, (x))
-#define FREE(x) HeapFree(GetProcessHeap(), 0, (x))
-
-static DWORD IsInterfaceUp(void)
-{
-	IP_ADAPTER_ADDRESSES* pAdapters = NULL, * pipa;
-	DWORD nBufferLength = WORKING_BUFFER_SIZE;
-	DWORD ret;
-
-	do
-	{
-		if (pAdapters != NULL)
-			FREE(pAdapters);
-		pAdapters = (IP_ADAPTER_ADDRESSES*)MALLOC(nBufferLength);
-		if (pAdapters == NULL)
-			return GetLastError();
-		ret = GetAdaptersAddresses(AF_UNSPEC, GAA_FLAGS, NULL, pAdapters, &nBufferLength);
-	} while (ret == ERROR_BUFFER_OVERFLOW);
-
-	if (ret != ERROR_SUCCESS)
-	{
-		FREE(pAdapters);
-		return ret;
-	}
-
-	for (pipa = pAdapters; pipa != NULL; pipa = pipa->Next)
-	{
-		if (pipa->IfType == IF_TYPE_SOFTWARE_LOOPBACK) continue;
-		if (pipa->IfType == IF_TYPE_TUNNEL) continue;
-		if (pipa->OperStatus == IfOperStatusUp) break;
-	}
-	FREE(pAdapters);
-	pAdapters = NULL;
-
-	if (pipa != NULL)
-		return ERROR_SUCCESS;
-
-	return ERROR_NO_DATA;
-}*/
 
 int main() {
+	IsInterfaceUp();
 	// イベントオブジェクトの作成
 	HANDLE hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 	HANDLE hand = NULL;
