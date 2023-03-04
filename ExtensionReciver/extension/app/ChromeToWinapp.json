@@ -1,0 +1,7 @@
+{
+  "name": "native_message_test",
+  "description": "Native Message example",
+  "path": "..\\..\\bin\\Release\\net6.0\\ExtensionReciver.exe",
+  "type": "stdio",
+  "allowed_origins": [ "chrome-extension://bfojipinepgaeemfpomdpocpialknfjd/" ]
+}

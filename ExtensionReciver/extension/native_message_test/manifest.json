@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Native Message",
+  "version": "1.0",
+  "description": "Execute Native Process",
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [ "scripts/content.js" ],
+      "matches": [ "file://*/*" ]
+    }
+  ],
+  "permissions": [
+    "nativeMessaging"
+  ]
+}
