@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="extension\native_message_test\" />
+  </ItemGroup>
+
 </Project>
