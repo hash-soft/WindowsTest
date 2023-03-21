@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Grid Name="grid1" Background="#FF87FAB6">
+    <TextBlock Name="textblock1" Text="Hello World from Xaml Islands!" FontSize="48" Foreground="Blue" HorizontalAlignment="Center"/>
+
+    <Button Name="button1" Content="ボタン" CornerRadius="10,10,10,10" BorderBrush="#FF211B1B" />
+    <Button Name="button2" Content="2個目" CornerRadius="10,10,10,10" BorderBrush="#FF211B1B" HorizontalAlignment="Center" />
+  </Grid>
+</Page>

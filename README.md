@@ -13,3 +13,7 @@ Micorosoft CppUnitTest フレームワーク を使用したプロジェクト
 # UnitTestTarget
 
 単体テスト対象
+
+# IslandUiPch
+
+Win32からUWPを使うためのテスト
