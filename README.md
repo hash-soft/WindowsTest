@@ -17,3 +17,7 @@ Micorosoft CppUnitTest フレームワーク を使用したプロジェクト
 # IslandUiPch
 
 Win32からUWPを使うためのテスト
+
+# CheckPrivilege
+
+特権確認
