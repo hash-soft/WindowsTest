@@ -21,3 +21,7 @@ Win32からUWPを使うためのテスト
 # CheckPrivilege
 
 特権確認
+
+# MFCLibrary
+
+MFCのモーダルとモードレスダイアログを使用するdll
